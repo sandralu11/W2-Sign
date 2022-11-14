@@ -15,6 +15,6 @@ export default defineConfig({
     }
   },
   base: process.env.NODE_ENV === 'production'
-    ? '/vite-tailwind-template/'
+    ? '/W2-Sign/'
     : '/'
 })
