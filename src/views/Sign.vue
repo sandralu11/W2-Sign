@@ -76,7 +76,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { useSignStore } from "../stores/sign";
 
@@ -88,13 +88,17 @@ const canvas = ref(null);
 const ctx = ref(null);
 const isPainting = ref(false);
 
+watch(pen, (value) => {
+  ctx.value.strokeStyle = value;
+});
+
 const getPaintPosition = (e) => {
   const canvasSize = canvas.value.getBoundingClientRect();
 
   if (e.type === "mousemove") {
     return {
-      x: e.clientX - canvasSize.left,
-      y: e.clientY - canvasSize.top,
+      x: e.clientX - canvasSize.x,
+      y: e.clientY - canvasSize.y,
     };
   } else {
     return {

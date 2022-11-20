@@ -4,6 +4,7 @@ import { ref } from "@vue/reactivity";
 import { useSignStore } from "./stores/sign";
 const signStore = useSignStore();
 signStore.initSignImg();
+signStore.initsavePdf();
 const modal = ref(true);
 window.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {

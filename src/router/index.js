@@ -23,6 +23,12 @@ const router = createRouter({
       path: "/save",
       name: "save",
       component: () => import("../views/Save.vue"),
+      props: route => ({ histroyPdf: route.query.h })
+    },
+    {
+      path: "/record",
+      name: "record",
+      component: () => import("../views/Record.vue"),
     },
   ],
 });

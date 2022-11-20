@@ -4,8 +4,13 @@ export const useSignStore = defineStore({
   id: "sign",
   state: () => ({
     signImg:[],
-
-  }),
+		pdf: {
+			url: '',
+			name: ''
+		},
+		finalPdf:"",
+		historyPdf: []
+	}),
   actions:{
     saveSignImg(base64){
       this.signImg.push(base64)
@@ -17,7 +22,18 @@ export const useSignStore = defineStore({
     deleteSignImg(index){
       this.signImg.splice(index,1)
       LS.save('signImg',this.signImg)
-    }
+    },
+
+    savePdf({ name, url }){
+			const now = new Date()
+			const month = now.getMonth() + 1
+			const day = now.getDate();
+      this.historyPdf.push({ name, url, time: month + '/' + day })
+      LS.save('savePdf',this.historyPdf)
+    },
+		initsavePdf(){
+			this.historyPdf=LS.load('savePdf')
+		},
   }
 })
 

@@ -7,6 +7,8 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "fabric": "^5.2.4",
+    "pdfjs-dist": "^3.0.279",
     "pinia": "^2.0.23",
     "vue": "^3.2.33",
     "vue-router": "^4.1.6"

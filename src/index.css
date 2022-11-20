@@ -15,7 +15,7 @@
 }
 
 .btn-border{
-  @apply w-40 rounded-xl border-2 border-primary px-10 py-3 text-primary bg-white;
+  @apply rounded-xl border-2 border-primary px-10 py-3 text-primary bg-white;
 }
 .btn-full{
   @apply  w-40 rounded-lg bg-primary bg-gradient-to-b from-green-600 to-green-900 py-3 px-10 text-white;
