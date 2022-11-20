@@ -24,5 +24,7 @@ window.addEventListener("DOMContentLoaded", function () {
 #app {
   background-color: #f0f0f0;
   min-height: 100vh;
+  max-width: 470px;
+  margin: auto;
 }
 </style>

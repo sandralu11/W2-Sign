@@ -7,7 +7,7 @@
         <span class="rounded-lg bg-primary py-1 px-2 text-white"
           ><i class="bx bxs-chevron-left"></i
         ></span>
-        <span>1/2</span>
+        <span>1/1</span>
         <span class="rounded-lg bg-primary py-1 px-2 text-white"
           ><i class="bx bxs-chevron-right"></i
         ></span>
